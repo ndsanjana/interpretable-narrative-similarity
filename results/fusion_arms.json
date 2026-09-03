@@ -1,0 +1,119 @@
+{
+ "arms": {
+  "additive_core": {
+   "alpha": 0.5,
+   "beta": 0.5,
+   "fit": "none"
+  },
+  "gated": {
+   "best_epoch": 1,
+   "epochs": 300,
+   "feature_dim": 14,
+   "hidden": 16,
+   "lr": 0.005,
+   "n_train": 11629,
+   "n_val": 1761,
+   "seed": 922,
+   "temp": 0.02,
+   "val_acc": 68.43,
+   "val_gate_stats": {
+    "frac_graph_favoured": 0.9869,
+    "frac_saturated_high": 0.0,
+    "frac_saturated_low": 0.0,
+    "max": 0.5368,
+    "mean": 0.5116,
+    "median": 0.5109,
+    "min": 0.4973,
+    "n": 3522,
+    "p10": 0.5039,
+    "p90": 0.5205,
+    "sd": 0.0064
+   },
+   "weight_decay": 0.0001
+  },
+  "learned_scalar": {
+   "alpha": 0.434372,
+   "beta": 0.565628,
+   "fit": "exact_breakpoint",
+   "n_val": 1761,
+   "val_acc": 68.99
+  },
+  "learned_scalar_logistic": {
+   "alpha": 0.067828,
+   "beta": 0.932172,
+   "fit": "logistic_gd",
+   "steps": 2000,
+   "temp": 0.02,
+   "val_acc": 65.36
+  }
+ },
+ "coverage": {
+  "train_dropped": {
+   "graph": 726,
+   "text": 71
+  },
+  "train_kept": 11629,
+  "train_rows": 12426,
+  "val_dropped": {
+   "graph": 65,
+   "text": 35
+  },
+  "val_kept": 1761,
+  "val_rows": 1861
+ },
+ "decomposition": {
+  "additive_core": {
+   "a_graph": 0.499999999874614,
+   "b_text": 0.500000006710293,
+   "intercept": -3.9292846198968334e-09,
+   "max_abs_residual": 3.170924101070227e-08,
+   "r2": 0.9999999999999883
+  },
+  "gated": {
+   "a_graph": 0.5164147244638632,
+   "b_text": 0.4767305460717857,
+   "intercept": 0.0059076453827986986,
+   "max_abs_residual": 0.025166673753675345,
+   "r2": 0.9996259612038189
+  },
+  "learned_scalar": {
+   "a_graph": 0.43437200976319895,
+   "b_text": 0.565627982288983,
+   "intercept": 6.859384393820278e-09,
+   "max_abs_residual": 5.6228522948842397e-08,
+   "r2": 0.9999999999999768
+  }
+ },
+ "gate_checkpoint": "results/fusion_gate.pt",
+ "gate_features": "cos_struct",
+ "graph_channel": {
+  "ckpt": "checkpoints/ckpt_seed111.pt",
+  "ckpt_epoch": 11,
+  "ckpt_val": {
+   "overall": 67.04
+  },
+  "data_dir": "data/graphs",
+  "dim": 256,
+  "encoder": "google/embeddinggemma-300m",
+  "knockout_edges": [],
+  "n_tales": 1384
+ },
+ "tag": "fusion",
+ "text_channel": {
+  "cache": "cache/gemini_tale_cache.jsonl",
+  "missing": 3,
+  "missing_ids": [
+   "101__0",
+   "155__7",
+   "1655__4"
+  ],
+  "source": "gemini-embedding-001 (cached, no API calls)"
+ },
+ "val_accuracy": {
+  "additive_core": 68.48,
+  "gated": 68.43,
+  "graph_only": 67.35,
+  "learned_scalar": 68.99
+ },
+ "wall_seconds": 16.3
+}

@@ -1,0 +1,3 @@
+# Final graph model: one line per seed, passed to src/train.py after --data-dir/--train/--val/--out-dir
+# seeds: 7 111 222 333 444 555 666 922 2026 31337
+--epochs 40 --min-epochs 6 --patience 6 --batch-size 32 --lr 1e-3 --weight-decay 1e-4 --hidden 256 --out-dim 256 --layers 3 --dropout 0.1 --conv sage --readout multi --loss infonce --tau 0.07

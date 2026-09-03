@@ -1,0 +1,312 @@
+{
+ "benchmark": "ATU-Union benchmark",
+ "benchmark_key": "atu_union",
+ "decision_space_angle": {
+  "angle_deg_centered": 65.4,
+  "angle_deg_uncentered": 48.83,
+  "n": 1346,
+  "pearson_r": 0.4162,
+  "sign_agreement_pct": 75.56
+ },
+ "decomposition_additive_core": {
+  "accuracy": {
+   "fused": 82.47,
+   "graph_only": 77.93
+  },
+  "alpha": 0.5,
+  "beta": 0.5,
+  "channel_agreement": 75.56,
+  "graph_contribution_share": {
+   "mean": 0.7418,
+   "median": 0.8029,
+   "p10": 0.4473,
+   "p90": 0.9409
+  },
+  "identity_r2": {
+   "a_graph": 0.5000000010266226,
+   "b_text": 0.4999999893136986,
+   "intercept": 7.066960183710336e-09,
+   "max_abs_residual": 3.1410851253355077e-08,
+   "r2": 0.9999999999999937
+  },
+  "margin_scale": {
+   "graph_mean_abs": 0.40631,
+   "text_mean_abs": 0.094879
+  },
+  "n": 1346,
+  "who_decides": {
+   "graph_right_text_right": {
+    "fused_acc": 100.0,
+    "n": 953,
+    "share": 70.8
+   },
+   "graph_right_text_wrong": {
+    "fused_acc": 94.79,
+    "n": 96,
+    "share": 7.13
+   },
+   "graph_wrong_text_right": {
+    "fused_acc": 28.33,
+    "n": 233,
+    "share": 17.31
+   },
+   "graph_wrong_text_wrong": {
+    "fused_acc": 0.0,
+    "n": 64,
+    "share": 4.75
+   }
+  }
+ },
+ "decomposition_learned_scalar": {
+  "accuracy": {
+   "fused": 83.06,
+   "graph_only": 77.93
+  },
+  "alpha": 0.434372,
+  "beta": 0.565628,
+  "channel_agreement": 75.56,
+  "graph_contribution_share": {
+   "mean": 0.7007,
+   "median": 0.7578,
+   "p10": 0.3832,
+   "p90": 0.9244
+  },
+  "identity_r2": {
+   "a_graph": 0.43437200868724657,
+   "b_text": 0.5656279811835553,
+   "intercept": 6.490040393991592e-09,
+   "max_abs_residual": 5.970366079299794e-08,
+   "r2": 0.999999999999988
+  },
+  "margin_scale": {
+   "graph_mean_abs": 0.40631,
+   "text_mean_abs": 0.094879
+  },
+  "n": 1346,
+  "who_decides": {
+   "graph_right_text_right": {
+    "fused_acc": 100.0,
+    "n": 953,
+    "share": 70.8
+   },
+   "graph_right_text_wrong": {
+    "fused_acc": 93.75,
+    "n": 96,
+    "share": 7.13
+   },
+   "graph_wrong_text_right": {
+    "fused_acc": 32.19,
+    "n": 233,
+    "share": 17.31
+   },
+   "graph_wrong_text_wrong": {
+    "fused_acc": 0.0,
+    "n": 64,
+    "share": 4.75
+   }
+  }
+ },
+ "dropped": {
+  "graph": 72,
+  "text": 0
+ },
+ "gate_analysis": {
+  "by_correctness": {
+   "correct": {
+    "frac_graph_favoured": 0.991,
+    "mean": 0.512,
+    "median": 0.5112,
+    "n": 2212,
+    "sd": 0.0065
+   },
+   "incorrect": {
+    "frac_graph_favoured": 0.9792,
+    "mean": 0.5113,
+    "median": 0.5105,
+    "n": 480,
+    "sd": 0.0062
+   }
+  },
+  "gate_vs_margins": {
+   "corr_gate_graph_margin": 0.189,
+   "corr_gate_margin_gap": 0.1967,
+   "corr_gate_text_margin": 0.0231
+  },
+  "interpretation_note": "gate above 0.5 means the pair is scored mostly by the graph channel; a gate that is flat across pairs is evidence that the learned gate found no pair-level rule and the additive core is the honest description of the fusion",
+  "overall": {
+   "frac_graph_favoured": 0.9889,
+   "frac_saturated_high": 0.0,
+   "frac_saturated_low": 0.0,
+   "max": 0.5439,
+   "mean": 0.5118,
+   "median": 0.511,
+   "min": 0.4952,
+   "n": 2692,
+   "p10": 0.5043,
+   "p90": 0.5203,
+   "sd": 0.0064
+  }
+ },
+ "gate_departure_from_additivity": {
+  "a_graph": 0.5176531803646112,
+  "b_text": 0.47598058265257326,
+  "intercept": 0.005592503225536782,
+  "max_abs_residual": 0.034789025468724366,
+  "r2": 0.9997312978332212
+ },
+ "graph_channel": {
+  "ckpt": "checkpoints/ckpt_seed111.pt",
+  "ckpt_epoch": 11,
+  "ckpt_val": {
+   "overall": 67.04
+  },
+  "data_dir": "data/graphs",
+  "dim": 256,
+  "encoder": "google/embeddinggemma-300m",
+  "knockout_edges": [],
+  "n_tales": 1384
+ },
+ "knockout": {
+  "deltas": [
+   {
+    "fused_overall": 82.76,
+    "fused_overall_delta": -0.3,
+    "graph_only_overall": 78.23,
+    "graph_only_overall_delta": 0.3,
+    "knockout_edges": [
+     "causes"
+    ],
+    "n": 1346,
+    "variant": "inference knockout: causes"
+   }
+  ],
+  "reference": {
+   "fused": {
+    "overall": {
+     "acc": 83.06,
+     "n": 1346
+    }
+   },
+   "fusion_weights": {
+    "alpha": 0.434372,
+    "beta": 0.565628
+   },
+   "graph_only": {
+    "overall": {
+     "acc": 77.93,
+     "n": 1346
+    }
+   }
+  },
+  "variants": [
+   {
+    "ckpt": "ckpt_seed111.pt",
+    "fused": {
+     "overall": {
+      "acc": 82.76,
+      "n": 1346
+     }
+    },
+    "graph_only": {
+     "overall": {
+      "acc": 78.23,
+      "n": 1346
+     }
+    },
+    "knockout_edges": [
+     "causes"
+    ],
+    "label": "inference knockout: causes",
+    "n": 1346
+   }
+  ]
+ },
+ "n_triplets": 1346,
+ "per_scorer_breakdown": {
+  "fusion_additive_core": {
+   "overall": {
+    "acc": 82.47,
+    "n": 1346
+   }
+  },
+  "fusion_gated": {
+   "overall": {
+    "acc": 82.17,
+    "n": 1346
+   }
+  },
+  "fusion_learned_scalar": {
+   "overall": {
+    "acc": 83.06,
+    "n": 1346
+   }
+  },
+  "graph_only": {
+   "overall": {
+    "acc": 77.93,
+    "n": 1346
+   }
+  }
+ },
+ "reference_ckpt": "checkpoints/ckpt_seed111.pt",
+ "representation_angles": {
+  "canonical_correlations": [
+   0.8899,
+   0.8121,
+   0.784,
+   0.7156,
+   0.6952,
+   0.6742,
+   0.5905,
+   0.5199,
+   0.4634,
+   0.4221,
+   0.3018,
+   0.2743,
+   0.2203,
+   0.1515,
+   0.1028,
+   0.0086
+  ],
+  "k_components": 16,
+  "linear_probe": {
+   "held_out_types": 34,
+   "mean_cosine_pred_vs_true": 0.8122,
+   "n_test": 255,
+   "n_train": 1126,
+   "r2_text_from_graph": 0.0967
+  },
+  "mean_principal_angle_deg": 59.85,
+  "n_tales": 1381,
+  "principal_angles_deg": [
+   27.14,
+   35.7,
+   38.37,
+   44.31,
+   45.96,
+   47.61,
+   53.8,
+   58.68,
+   62.39,
+   65.03,
+   72.43,
+   74.08,
+   77.27,
+   81.29,
+   84.1,
+   89.51
+  ],
+  "smallest_principal_angle_deg": 27.14
+ },
+ "text_channel": {
+  "cache": "cache/gemini_tale_cache.jsonl",
+  "missing": 3,
+  "missing_ids": [
+   "101__0",
+   "155__7",
+   "1655__4"
+  ],
+  "source": "gemini-embedding-001 (cached, no API calls)"
+ },
+ "wall_seconds": 23.1
+}

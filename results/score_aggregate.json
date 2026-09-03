@@ -1,0 +1,215 @@
+{
+ "aggregate": [
+  {
+   "best_seed": {
+    "ckpt": "ckpt_seed31337.pt",
+    "overall": 85.96,
+    "seed": 31337
+   },
+   "knockout_edges": [],
+   "mean": {
+    "overall": {
+     "mean": 82.7,
+     "n": 1346,
+     "n_seeds": 10,
+     "sd": 1.42
+    }
+   },
+   "n_seeds": 10,
+   "scorer": "fusion additive core",
+   "seeds": [
+    111,
+    2026,
+    222,
+    31337,
+    333,
+    444,
+    555,
+    666,
+    7,
+    922
+   ],
+   "text_channel": "embgemma"
+  },
+  {
+   "best_seed": {
+    "ckpt": "ckpt_seed31337.pt",
+    "overall": 85.59,
+    "seed": 31337
+   },
+   "knockout_edges": [],
+   "mean": {
+    "overall": {
+     "mean": 82.67,
+     "n": 1346,
+     "n_seeds": 10,
+     "sd": 1.3
+    }
+   },
+   "n_seeds": 10,
+   "scorer": "fusion additive core",
+   "seeds": [
+    111,
+    2026,
+    222,
+    31337,
+    333,
+    444,
+    555,
+    666,
+    7,
+    922
+   ],
+   "text_channel": "gemini"
+  },
+  {
+   "best_seed": {
+    "ckpt": "ckpt_seed31337.pt",
+    "overall": 85.59,
+    "seed": 31337
+   },
+   "knockout_edges": [],
+   "mean": {
+    "overall": {
+     "mean": 82.54,
+     "n": 1346,
+     "n_seeds": 10,
+     "sd": 1.38
+    }
+   },
+   "n_seeds": 10,
+   "scorer": "fusion gated",
+   "seeds": [
+    111,
+    2026,
+    222,
+    31337,
+    333,
+    444,
+    555,
+    666,
+    7,
+    922
+   ],
+   "text_channel": "gemini"
+  },
+  {
+   "best_seed": {
+    "ckpt": "ckpt_seed31337.pt",
+    "overall": 86.4,
+    "seed": 31337
+   },
+   "knockout_edges": [],
+   "mean": {
+    "overall": {
+     "mean": 83.57,
+     "n": 1346,
+     "n_seeds": 10,
+     "sd": 1.25
+    }
+   },
+   "n_seeds": 10,
+   "scorer": "fusion learned scalar",
+   "seeds": [
+    111,
+    2026,
+    222,
+    31337,
+    333,
+    444,
+    555,
+    666,
+    7,
+    922
+   ],
+   "text_channel": "gemini"
+  },
+  {
+   "best_seed": {
+    "ckpt": "ckpt_seed31337.pt",
+    "overall": 82.47,
+    "seed": 31337
+   },
+   "knockout_edges": [],
+   "mean": {
+    "overall": {
+     "mean": 78.84,
+     "n": 1346,
+     "n_seeds": 10,
+     "sd": 1.79
+    }
+   },
+   "n_seeds": 10,
+   "scorer": "graph-only",
+   "seeds": [
+    111,
+    2026,
+    222,
+    31337,
+    333,
+    444,
+    555,
+    666,
+    7,
+    922
+   ],
+   "text_channel": null
+  },
+  {
+   "best_seed": {
+    "ckpt": null,
+    "overall": 67.91,
+    "seed": null
+   },
+   "knockout_edges": [],
+   "mean": {
+    "overall": {
+     "mean": 67.91,
+     "n": 1418,
+     "n_seeds": 1,
+     "sd": 0.0
+    }
+   },
+   "n_seeds": 1,
+   "scorer": "surface baseline (token Jaccard)",
+   "seeds": [
+    null
+   ],
+   "text_channel": null
+  }
+ ],
+ "benchmark": "ATU-Union benchmark",
+ "benchmark_key": "atu_union",
+ "checkpoints": [
+  "checkpoints/ckpt_seed111.pt",
+  "checkpoints/ckpt_seed2026.pt",
+  "checkpoints/ckpt_seed222.pt",
+  "checkpoints/ckpt_seed31337.pt",
+  "checkpoints/ckpt_seed333.pt",
+  "checkpoints/ckpt_seed444.pt",
+  "checkpoints/ckpt_seed555.pt",
+  "checkpoints/ckpt_seed666.pt",
+  "checkpoints/ckpt_seed7.pt",
+  "checkpoints/ckpt_seed922.pt"
+ ],
+ "eval_meta": "data/atu_union_benchmark.meta.jsonl",
+ "fusion_arms": "results/fusion_arms.json",
+ "knockout_edges": [],
+ "text_channels": {
+  "embgemma": {
+   "adapter": null,
+   "missing": 0,
+   "source": "google/embeddinggemma-300m (STS prompt), zero-shot"
+  },
+  "gemini": {
+   "missing": 3,
+   "missing_ids": [
+    "101__0",
+    "155__7",
+    "1655__4"
+   ],
+   "source": "gemini-embedding-001 (cached, no API calls)"
+  }
+ },
+ "wall_seconds": 99.3
+}

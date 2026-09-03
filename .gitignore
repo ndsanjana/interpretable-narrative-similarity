@@ -1,0 +1,12 @@
+__pycache__/
+*.pyc
+.env
+cache/
+checkpoints/
+runs/
+data/graphs/
+data/*.jsonl
+data/*.json
+!data/causal_gold_annotations.jsonl
+*.pt
+*.npz
